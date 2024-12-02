@@ -24,6 +24,8 @@ public class RankService {
     @Autowired
     private UserRepository userRepository;
 
+
+    //24시간에 한번
     @Scheduled(cron = "0 0 0 * * *")
     @CacheEvict(value = "ranking", allEntries = true)
     public void updateRank() {
