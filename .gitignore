@@ -44,3 +44,6 @@ out/
 
 # idea 전부 무시
 .idea/**
+
+/src/main/resources/**.yml
+/src/main/resources/**.properties
