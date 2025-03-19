@@ -102,12 +102,15 @@ public class SecurityConfig {
 
         http
                 .authorizeHttpRequests((auth) -> auth
-                        .requestMatchers("/api/users/check","/api/tokens ", "/api/users", "/api/tokens/validate",
+                        .requestMatchers("/api/users/check", "/api/tokens ", "/api/users", "/api/tokens/validate",
                                 "/api/guide/stores",
                                 "/api/guide/stores/nearby",
                                 "/api/guide/stores/all", "/api/guide/stores?keyword=",
                                 "/api/guide/stores?category=",
-                                "/api/users/logout","/dosirak", "/app/**").permitAll()
+                                "/api/users/logout",
+                                "/dosirak",
+                                "/app/**",
+                                "/test/**").permitAll()
                         .anyRequest().authenticated());
 
 
@@ -117,9 +120,6 @@ public class SecurityConfig {
 
         return http.build();
     }
-
-
-
 
 
 }
